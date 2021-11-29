@@ -23,3 +23,9 @@ tasks:
     run_tests:
         options:
             required_org_code_coverage_percent: 90
+
+flows:
+    config_dev:
+        steps:
+            3:
+                task: load_dataset
