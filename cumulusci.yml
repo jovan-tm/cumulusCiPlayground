@@ -1,0 +1,25 @@
+minimum_cumulusci_version: '3.48.2'
+project:
+    name: cumulusCiPlayground
+    package:
+        name: cumulusCiPlayground
+        api_version: '52.0'
+    git:
+        default_branch: 'main'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/cumulusCiPlayground/tests
+            options:
+                outputdir: robot/cumulusCiPlayground/results
+
+    robot_testdoc:
+        options:
+            path: robot/cumulusCiPlayground/tests
+            output: robot/cumulusCiPlayground/doc/cumulusCiPlayground_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 90
